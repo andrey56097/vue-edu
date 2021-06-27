@@ -16,6 +16,21 @@
         <p>
             {{message_test}}
         </p>
+        <h1 v-if="flag">True</h1>
+        <h1 v-else>False</h1>
+
+        <h1 v-if="status == 1">Status is {{status}}</h1>
+
+        <template v-if="status == 1  ">
+            <h1>Title</h1>
+            <p>description</p>
+        </template>
+
+        <template v->
+            <h1>Title 2</h1>
+            <p>description 2</p>
+        </template>
+
     </div>
 </body>
 </html>
@@ -26,6 +41,8 @@
         data: {
             message: 'Hello Vue!',
             message_test: 'Hello Vue Test!',
+            flag: false,
+            status: 1,
         }
     })
 </script>
